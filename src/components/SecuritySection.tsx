@@ -1,38 +1,28 @@
 import React from 'react';
-import { Shield, Lock, Server, FileCheck, Eye, Zap } from 'lucide-react';
+import { LockKeyhole, ShieldCheck, Server, FileCheck } from 'lucide-react';
 
 const SecuritySection = () => {
-    const securityFeatures = [
+    const securityPoints = [
         {
-            icon: Shield,
-            title: 'Data Protection',
-            description: 'Bank-level encryption and secure data handling protocols to protect your sensitive financial information.'
+            icon: LockKeyhole,
+            title: 'End-to-End Encryption',
+            description: 'All financial data is encrypted from upload to access—ensuring safety at every step.',
         },
         {
-            icon: Lock,
-            title: 'Secure Access',
-            description: 'Multi-factor authentication and biometric entry systems ensure only authorized personnel access your data.'
+            icon: ShieldCheck,
+            title: 'Multi-layered Data Protection',
+            description: 'Robust firewalls, intrusion detection, and access controls to prevent unauthorized entry.',
         },
         {
             icon: Server,
-            title: 'Infrastructure Security',
-            description: 'State-of-the-art servers with redundant backups and 99.9% uptime guarantee for continuous service.'
+            title: 'Secure Cloud Storage',
+            description: 'We use AWS servers with strict access protocols to ensure only authorized personnel access data.',
         },
         {
             icon: FileCheck,
-            title: 'Compliance Standards',
-            description: 'Full compliance with GDPR, SOX, and other international data protection regulations.'
+            title: 'Security Audits & Compliance',
+            description: 'Regular vulnerability testing and full compliance with international standards.',
         },
-        {
-            icon: Eye,
-            title: 'Audit Trails',
-            description: 'Complete audit trails and monitoring systems to track all data access and modifications.'
-        },
-        {
-            icon: Zap,
-            title: 'Real-time Monitoring',
-            description: '24/7 security monitoring with instant alerts for any suspicious activities or breaches.'
-        }
     ];
 
     const certifications = [
@@ -41,26 +31,26 @@ const SecuritySection = () => {
         'GDPR Compliant',
         'PCI DSS Certified',
         'HIPAA Compliant',
-        'SSL/TLS Encrypted'
+        'SSL/TLS Encrypted',
     ];
 
     return (
         <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold text-gray-900 mb-4">
                         Security & <span className="text-blue-700">Infrastructure</span>
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Your data security is our top priority. We employ industry-leading security measures
-                        to ensure your financial information remains safe and confidential.
+                    <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+                        At Accueasee Services, protecting client data is our top priority and we employ industry-leading security measures to ensure your financial information remains safe and confidential. That’s why we leverage Amazon Web Services (AWS) security infrastructure — the same trusted platform used by Fortune 500 companies and leading global institutions.
                     </p>
                 </div>
 
-                {/* Security Features Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                    {securityFeatures.map((feature, index) => {
-                        const Icon = feature.icon;
+                {/* Security Cards */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                    {securityPoints.map((point, index) => {
+                        const Icon = point.icon;
                         return (
                             <div
                                 key={index}
@@ -69,8 +59,8 @@ const SecuritySection = () => {
                                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-700 transition-colors">
                                     <Icon className="h-8 w-8 text-blue-700 group-hover:text-white transition-colors" />
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                                <p className="text-gray-600">{feature.description}</p>
+                                <h3 className="text-xl font-bold text-gray-900 mb-4">{point.title}</h3>
+                                <p className="text-gray-600">{point.description}</p>
                             </div>
                         );
                     })}
@@ -93,39 +83,9 @@ const SecuritySection = () => {
                     </div>
                 </div>
 
-                {/* Security Process */}
-                <div className="mt-16 bg-blue-700 rounded-2xl p-8 text-white">
-                    <h3 className="text-2xl font-bold mb-8 text-center">Our Security Process</h3>
-                    <div className="grid md:grid-cols-4 gap-8">
-                        <div className="text-center">
-                            <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                                1
-                            </div>
-                            <h4 className="font-semibold mb-2">Secure Upload</h4>
-                            <p className="text-blue-100 text-sm">Encrypted file transfer with secure portals</p>
-                        </div>
-                        <div className="text-center">
-                            <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                                2
-                            </div>
-                            <h4 className="font-semibold mb-2">Protected Processing</h4>
-                            <p className="text-blue-100 text-sm">Data processed in secure, isolated environments</p>
-                        </div>
-                        <div className="text-center">
-                            <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                                3
-                            </div>
-                            <h4 className="font-semibold mb-2">Secure Storage</h4>
-                            <p className="text-blue-100 text-sm">Encrypted storage with multiple backup locations</p>
-                        </div>
-                        <div className="text-center">
-                            <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                                4
-                            </div>
-                            <h4 className="font-semibold mb-2">Safe Delivery</h4>
-                            <p className="text-blue-100 text-sm">Secure delivery through encrypted channels</p>
-                        </div>
-                    </div>
+                {/* Final Statement */}
+                <div className="mt-8 bg-blue-50 border-l-4 border-blue-700 p-6 rounded-xl text-blue-900 text-base font-medium shadow-sm">
+                    Our systems are designed to ensure your data remains confidential, secure, and accessible only to authorized personnel — no compromises.
                 </div>
             </div>
         </section>

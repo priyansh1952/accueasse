@@ -13,7 +13,6 @@ const ContactSection = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle form submission here
         console.log('Form submitted:', formData);
         alert('Thank you for your message! We will get back to you soon.');
         setFormData({
@@ -26,7 +25,9 @@ const ContactSection = () => {
         });
     };
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    ) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
@@ -76,9 +77,12 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-gray-900">Address</h4>
-                                    <p className="text-gray-600">123 Business Avenue<br />Suite 456, City, State 12345</p>
+                                    <p className="text-gray-600">
+                                        A-25 1st floor 103, Sunshine residency<br />
+                                        Shastri Nagar, Jaipur 302016
+                                    </p>
                                 </div>
-                            </div>
+                            </div> {/* ✅ Properly closed */}
 
                             <div className="flex items-start">
                                 <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
@@ -175,7 +179,7 @@ const ContactSection = () => {
                                     <option value="tax">Tax Preparation</option>
                                     <option value="reporting">Financial Reporting</option>
                                     <option value="consulting">Business Consulting</option>
-                                    <option value="compliance">Compliance & Audit</option>
+                                    <option value="compliance">Business System Management</option>
                                 </select>
                             </div>
 

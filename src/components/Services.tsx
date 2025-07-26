@@ -35,9 +35,14 @@ const Services = () => {
         },
         {
             icon: Shield,
-            title: 'Compliance & Audit',
-            description: 'Ensure your business meets all regulatory requirements and audit support.',
-            features: ['Compliance monitoring', 'Audit preparation', 'Risk assessment', 'Documentation']
+            title: 'Business System Management',
+            description: 'Why choose Accueasee — Proficient in QuickBooks, Zoho Books, Xero, Sage, and other leading platforms—enhanced by the use of AI tools for smarter, faster accounting.',
+            features: [
+                'QuickBooks, Zoho Books, Xero, Sage expertise',
+                'AI-powered automation',
+                'Faster, error-free reporting',
+                'Tailored financial workflows'
+            ]
         }
     ];
 

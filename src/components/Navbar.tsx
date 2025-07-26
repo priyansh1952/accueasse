@@ -13,16 +13,11 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
-
-            // Set scrolled state for styling
             setIsScrolled(currentScrollY > 20);
 
-            // Hide/show navbar based on scroll direction
             if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                // Scrolling down
                 setIsVisible(false);
             } else {
-                // Scrolling up
                 setIsVisible(true);
             }
 
@@ -45,18 +40,22 @@ const Navbar = () => {
     const isActive = (path: string) => location.pathname === path;
 
     return (
-        <nav className={`fixed w-full z-40 transition-all duration-500 ease-in-out ${isVisible ? 'translate-y-0' : '-translate-y-full'
-            } ${isScrolled
-                ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100'
-                : 'bg-white/90 backdrop-blur-sm'
-            }`}>
+        <nav
+            className={`fixed w-full z-40 transition-all duration-500 ease-in-out ${isVisible ? 'translate-y-0' : '-translate-y-full'
+                } ${isScrolled
+                    ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100'
+                    : 'bg-white/90 backdrop-blur-sm'
+                }`}
+        >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <Link to="/" className="flex items-center py-1 group">
-                        <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
-                            AccuEasee
-                        </span>
+                        <img
+                            src="/Accuease-logo_website.png"
+                            alt="Accuease Logo"
+                            className="h-20 w-auto object-contain"
+                        />
                     </Link>
 
                     {/* Desktop Navigation */}
@@ -71,22 +70,24 @@ const Navbar = () => {
                         </Link>
 
                         {/* Services Dropdown */}
-                        <div className="relative">
+                        <div
+                            className="relative"
+                            onMouseEnter={() => setIsServicesOpen(true)}
+                            onMouseLeave={() => setIsServicesOpen(false)}
+                        >
                             <button
-                                onClick={() => setIsServicesOpen(!isServicesOpen)}
-                                onMouseEnter={() => setIsServicesOpen(true)}
                                 className={`flex items-center space-x-1 text-gray-700 hover:text-blue-700 transition-all duration-300 font-medium group ${isActive('/services') ? 'text-blue-700' : ''
                                     }`}
                             >
                                 <span>Accounting & Bookkeeping Services</span>
-                                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''
+                                    }`} />
                                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
                             </button>
 
                             <div
                                 className={`absolute top-full left-0 mt-2 w-72 bg-white/95 backdrop-blur-md rounded-xl shadow-2xl border border-gray-100 py-3 transition-all duration-300 ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                                     }`}
-                                onMouseLeave={() => setIsServicesOpen(false)}
                             >
                                 {services.map((service) => (
                                     <Link
@@ -110,14 +111,6 @@ const Navbar = () => {
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
                         </Link>
                         <Link
-                            to="/blog"
-                            className={`relative text-gray-700 hover:text-blue-700 transition-all duration-300 font-medium group ${isActive('/blog') ? 'text-blue-700' : ''
-                                }`}
-                        >
-                            Blog
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
-                        </Link>
-                        <Link
                             to="/contact"
                             className={`relative text-gray-700 hover:text-blue-700 transition-all duration-300 font-medium group ${isActive('/contact') ? 'text-blue-700' : ''
                                 }`}
@@ -135,7 +128,7 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    {/* Mobile menu button */}
+                    {/* Mobile Menu Button */}
                     <div className="lg:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
@@ -147,8 +140,10 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Navigation */}
-                <div className={`lg:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                    } overflow-hidden bg-white/95 backdrop-blur-md border-t border-gray-100`}>
+                <div
+                    className={`lg:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                        } overflow-hidden bg-white/95 backdrop-blur-md border-t border-gray-100`}
+                >
                     <div className="px-2 pt-2 pb-3 space-y-1">
                         <Link
                             to="/about"
@@ -165,9 +160,13 @@ const Navbar = () => {
                                 className="flex items-center space-x-1 text-gray-700 hover:text-blue-700 transition-colors w-full text-left"
                             >
                                 <span>Services</span>
-                                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''
+                                    }`} />
                             </button>
-                            <div className={`transition-all duration-300 ${isServicesOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
+                            <div
+                                className={`transition-all duration-300 ${isServicesOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+                                    } overflow-hidden`}
+                            >
                                 <div className="mt-2 pl-4 space-y-1">
                                     {services.map((service) => (
                                         <Link
@@ -192,13 +191,6 @@ const Navbar = () => {
                             onClick={() => setIsOpen(false)}
                         >
                             Security
-                        </Link>
-                        <Link
-                            to="/blog"
-                            className="block px-3 py-2 text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-all duration-200"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            Blog
                         </Link>
                         <Link
                             to="/contact"

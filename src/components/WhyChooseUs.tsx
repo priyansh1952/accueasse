@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, Shield, DollarSign, Users, CheckCircle, Star, ArrowRight, Award } from 'lucide-react';
+import { Clock, Shield, DollarSign, Users, CheckCircle, Star } from 'lucide-react';
 
 const WhyChooseUs = () => {
     const reasons = [
@@ -53,16 +53,15 @@ const WhyChooseUs = () => {
                         return (
                             <div
                                 key={index}
-                                className="bg-white rounded-xl shadow-md p-8 border border-gray-100"
+                                className="glassmorphism rounded-2xl p-8 group transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                             >
-                                <div className="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                                    <Icon className="h-8 w-8 text-blue-700" />
+                                <div className="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-300">
+                                    <Icon className="h-8 w-8 text-blue-700 group-hover:text-white transition-colors" />
                                 </div>
-
-                                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors">
                                     {reason.title}
                                 </h3>
-                                <p className="text-gray-600 leading-relaxed">
+                                <p className="text-gray-600 leading-relaxed group-hover:text-gray-800 transition-colors">
                                     {reason.description}
                                 </p>
                             </div>
@@ -72,7 +71,7 @@ const WhyChooseUs = () => {
 
                 {/* CTA Section */}
                 <div className="text-center">
-                    <div className="bg-blue-700 rounded-2xl p-12 max-w-4xl mx-auto text-white">
+                    <div className="bg-blue-700 rounded-2xl p-12 max-w-4xl mx-auto text-white shadow-xl">
                         <h3 className="text-3xl font-bold mb-6">
                             Ready to Transform Your Business Finances?
                         </h3>
@@ -81,10 +80,10 @@ const WhyChooseUs = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                            <button className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300">
                                 Schedule Consultation
                             </button>
-                            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition-colors">
+                            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition-all duration-300">
                                 Learn More
                             </button>
                         </div>

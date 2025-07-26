@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calculator, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import {
+  Mail,
+  MapPin,
+  Linkedin
+} from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,10 +13,8 @@ const Footer = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Security', href: '/security' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' }
+    { name: 'Privacy Policy', href: '/privacy' }
   ];
 
   const services = [
@@ -21,13 +23,12 @@ const Footer = () => {
     { name: 'Tax Preparation', href: '/services#taxation' },
     { name: 'Financial Reporting', href: '/services#reporting' },
     { name: 'Business Consulting', href: '/services#consulting' },
-    { name: 'Compliance & Audit', href: '/services#compliance' }
+    { name: 'Business System Management', href: '/services#compliance' }
   ];
 
   const countries = [
     { name: 'USA', flag: '🇺🇸', phone: '+1 (555) 123-4567' },
-    { name: 'UK', flag: '🇬🇧', phone: '+44 20 7123 4567' },
-    { name: 'India', flag: '🇮🇳', phone: '+91 98765 43210' }
+    { name: 'India', flag: '🇮🇳', phone: '+91 7976504630' }
   ];
 
   return (
@@ -37,30 +38,17 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              
               <div>
                 <span className="text-2xl font-bold">AccuEasee</span>
-                <div className="text-xs text-blue-400 font-medium">Global Financial Solutions</div>
+                <div className="text-xs text-blue-400 font-medium">
+                  Global Financial Solutions
+                </div>
               </div>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Professional accounting and bookkeeping services trusted by businesses worldwide. 
+              Professional accounting and bookkeeping services trusted by businesses worldwide.
               We provide comprehensive financial solutions to help your business thrive.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Twitter className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Linkedin className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Instagram className="h-6 w-6" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -69,8 +57,8 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
-                    to={link.href} 
+                  <Link
+                    to={link.href}
                     className="text-gray-400 hover:text-white transition-colors hover:translate-x-1 transform duration-200 inline-block"
                   >
                     {link.name}
@@ -86,8 +74,8 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.name}>
-                  <Link 
-                    to={service.href} 
+                  <Link
+                    to={service.href}
                     className="text-gray-400 hover:text-white transition-colors hover:translate-x-1 transform duration-200 inline-block"
                   >
                     {service.name}
@@ -103,18 +91,21 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-blue-400 mr-3 flex-shrink-0" />
-                <a href="mailto:info@proaccounting.com" className="text-gray-400 hover:text-white transition-colors">
+                <a
+                  href="mailto:info@accueasee.com"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   info@accueasee.com
                 </a>
               </div>
+
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-blue-400 mr-3 mt-1 flex-shrink-0" />
                 <span className="text-gray-400">
-                  123 Business Avenue<br />
-                  Suite 456, City, State 12345
+                  A-25 1st floor 103, Sunshine Residency, Shastri Nagar, Jaipur 302016
                 </span>
               </div>
-              
+
               {/* Global Contact Numbers */}
               <div className="pt-4">
                 <h4 className="text-sm font-semibold text-blue-400 mb-3">Global Offices</h4>
@@ -122,7 +113,7 @@ const Footer = () => {
                   <div key={country.name} className="flex items-center mb-2">
                     <span className="text-lg mr-2">{country.flag}</span>
                     <span className="text-sm text-gray-400 mr-2">{country.name}:</span>
-                    <a 
+                    <a
                       href={`tel:${country.phone}`}
                       className="text-sm text-gray-400 hover:text-white transition-colors"
                     >
@@ -141,8 +132,6 @@ const Footer = () => {
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} AccuEasee. All rights reserved.
             </div>
-            
-            {/* Country Flags */}
             <div className="flex items-center space-x-4">
               <span className="text-sm text-gray-400">Serving clients in:</span>
               {countries.map((country) => (
@@ -160,3 +149,4 @@ const Footer = () => {
 };
 
 export default Footer;
+  

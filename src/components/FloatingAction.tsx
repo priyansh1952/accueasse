@@ -91,7 +91,7 @@ const FloatingAction = () => {
                                         <option value="tax">Tax Preparation</option>
                                         <option value="reporting">Financial Reporting</option>
                                         <option value="consulting">Business Consulting</option>
-                                        <option value="compliance">Compliance & Audit</option>
+                                        <option value="compliance">Business System Management</option>
                                     </select>
                                 </div>
 
