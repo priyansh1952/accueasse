@@ -36,13 +36,8 @@ const Services = () => {
         {
             icon: Shield,
             title: 'Business System Management',
-            description: 'Why choose Accueasee — Proficient in QuickBooks, Zoho Books, Xero, Sage, and other leading platforms—enhanced by the use of AI tools for smarter, faster accounting.',
-            features: [
-                'QuickBooks, Zoho Books, Xero, Sage expertise',
-                'AI-powered automation',
-                'Faster, error-free reporting',
-                'Tailored financial workflows'
-            ]
+            description: '', // No description
+            features: []     // No features
         }
     ];
 
@@ -73,15 +68,19 @@ const Services = () => {
                                 <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors">
                                     {service.title}
                                 </h3>
-                                <p className="text-gray-600 mb-6">{service.description}</p>
-                                <ul className="space-y-2">
-                                    {service.features.map((feature, idx) => (
-                                        <li key={idx} className="flex items-center text-sm text-gray-600">
-                                            <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full mr-3"></div>
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
+                                {service.description && (
+                                    <p className="text-gray-600 mb-6">{service.description}</p>
+                                )}
+                                {service.features.length > 0 && (
+                                    <ul className="space-y-2">
+                                        {service.features.map((feature, idx) => (
+                                            <li key={idx} className="flex items-center text-sm text-gray-600">
+                                                <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full mr-3"></div>
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
                             </div>
                         );
                     })}

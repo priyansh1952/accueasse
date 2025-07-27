@@ -17,7 +17,7 @@ const About = () => {
                         About <span className="gradient-text">AccuEasee</span>
                     </h2>
                     <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium">
-                        We are a team of certified public accountants dedicated to providing
+                        We are a team of certified Chartered Accountants dedicated to providing
                         comprehensive financial solutions for businesses of all sizes.
                     </p>
                     <div className="my-8 flex justify-center">
@@ -25,43 +25,33 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-16 items-center mb-16 -mt-6">
+                <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
                     <div className="animate-slide-up">
                         <h3 className="text-3xl font-bold text-gray-900 mb-6">
                             Your Trusted Financial Partner
                         </h3>
-                        <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                            With over a decade of experience in accounting and bookkeeping,
-                            we understand the unique challenges businesses face in managing
-                            their finances. Our team of certified professionals is committed
-                            to delivering accurate, timely, and cost-effective solutions.
-                        </p>
+
                         <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                            We believe that every business deserves access to professional
-                            financial services that help them make informed decisions,
-                            maintain compliance, and achieve sustainable growth.
-                        </p>
-                        <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                            We are a dedicated Accounting & Bookkeeping Vertical of a leading firm that has been delivering excellence in Taxation, Audit, and Accounting Services for over 45 years — and now, expanding with full force into that legacy with overseas/international Accounting.
+                            We are a dedicated Accounting & Bookkeeping Vertical of a leading firm that has been delivering excellence in Taxation, Audit, and Accounting Services for over 45 years. Now, expanding with full force into that legacy with overseas/international Accounting.
                         </p>
                         <p className="text-gray-600 mb-8 leading-relaxed text-lg">
                             Our strategic expansion underscores our commitment to delivering complete financial solutions under one roof. We offer deep expertise across US, UK, Australian GAAP, and a wide range of global accounting frameworks.
                         </p>
                         <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                            Our team is led by Chartered Accountants with over 5 years of hands-on experience at Big Four firms and top-tier fund accounting organizations — ensuring international standards are met with precision and local insight.
+                            Our team is led by Chartered Accountants with over 5 years of hands-on experience at Big Four firms and top-tier fund accounting organizations, ensuring international standards are met with precision and local insight.
                         </p>
                         <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                            Backed by years of industry experience, regulatory knowledge, and client trust — and further strengthened by our network of partnered CPAs across key global jurisdictions — we are fully equipped to support businesses with end-to-end financial transparency and control.
+                            Backed by years of industry experience, regulatory knowledge, and client trust, and further strengthened by our network of partnered CPAs across key global jurisdictions, we are fully equipped to support businesses with end-to-end financial transparency and control.
                         </p>
                         <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                            No matter your size — our seasoned professionals deliver reliable accounting services with a focus on accuracy, compliance, and transparency.
+                            No matter your size, our seasoned professionals deliver reliable accounting services with a focus on accuracy, compliance, and transparency.
                         </p>
                         <p className="text-blue-700 font-semibold italic text-lg">
-                            Where legacy meets innovation — we evolve as your business grows.
+                            Where legacy meets innovation, we evolve as your business grows.
                         </p>
                     </div>
 
-                    <div className="relative animate-slide-up">
+                    <div className="relative animate-slide-up -mt-10">
                         <div className="relative z-10">
                             <img
                                 src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800"

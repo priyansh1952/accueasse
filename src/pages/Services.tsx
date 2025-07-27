@@ -1,77 +1,48 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
 import { Calculator, FileText, CreditCard, BarChart3, Users, Shield } from 'lucide-react';
 
 const Services = () => {
-    const location = useLocation();
-
-    useEffect(() => {
-        const hash = location.hash;
-        if (hash) {
-            const id = hash.replace('#', '');
-            const el = document.getElementById(id);
-            if (el) {
-                setTimeout(() => {
-                    el.scrollIntoView({ behavior: 'smooth' });
-                }, 200); // small delay to ensure DOM is ready
-            }
-        } else {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    }, [location]);
-
     const services = [
         {
-            id: 'bookkeeping',
             icon: Calculator,
             title: 'Bookkeeping',
             description: 'Accurate daily transaction recording, account reconciliation, and financial record maintenance.',
             features: ['Daily transaction recording', 'Bank reconciliation', 'Accounts payable/receivable', 'Financial statements']
         },
         {
-            id: 'payroll',
             icon: CreditCard,
             title: 'Payroll Management',
             description: 'Complete payroll processing, tax calculations, and compliance management.',
             features: ['Payroll processing', 'Tax calculations', 'Direct deposit setup', 'Compliance reporting']
         },
         {
-            id: 'taxation',
             icon: FileText,
             title: 'Tax Preparation',
             description: 'Professional tax preparation and filing services for individuals and businesses.',
             features: ['Tax return preparation', 'Tax planning', 'IRS representation', 'Audit support']
         },
         {
-            id: 'reporting',
             icon: BarChart3,
             title: 'Financial Reporting',
             description: 'Comprehensive financial analysis and reporting to guide business decisions.',
             features: ['Monthly/quarterly reports', 'Cash flow analysis', 'Budget planning', 'KPI tracking']
         },
         {
-            id: 'consulting',
             icon: Users,
             title: 'Business Consulting',
             description: 'Strategic financial advice to help your business grow and optimize operations.',
             features: ['Financial planning', 'Business strategy', 'Process optimization', 'Growth planning']
         },
         {
-            id: 'compliance',
             icon: Shield,
             title: 'Business System Management',
-            description: 'Why choose Accueasee — Proficient in QuickBooks, Zoho Books, Xero, Sage, and other leading platforms—enhanced by the use of AI tools for smarter, faster accounting.',
-            features: [
-                'QuickBooks, Zoho Books, Xero, Sage expertise',
-                'AI-powered automation',
-                'Faster, error-free reporting',
-                'Tailored financial workflows'
-            ]
+            description: '', // No description
+            features: []     // No features
         }
     ];
 
     return (
-        <section className="py-20 bg-section-secondary">
+        <section id="services" className="py-20 bg-section-secondary">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 animate-fade-in">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -86,8 +57,7 @@ const Services = () => {
                     {services.map((service, index) => {
                         const Icon = service.icon;
                         return (
-                            <section
-                                id={service.id}
+                            <div
                                 key={index}
                                 className="glassmorphism rounded-2xl p-8 group card-hover animate-slide-up"
                                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -98,16 +68,20 @@ const Services = () => {
                                 <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors">
                                     {service.title}
                                 </h3>
-                                <p className="text-gray-600 mb-6">{service.description}</p>
-                                <ul className="space-y-2">
-                                    {service.features.map((feature, idx) => (
-                                        <li key={idx} className="flex items-center text-sm text-gray-600">
-                                            <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full mr-3"></div>
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </section>
+                                {service.description && (
+                                    <p className="text-gray-600 mb-6">{service.description}</p>
+                                )}
+                                {service.features.length > 0 && (
+                                    <ul className="space-y-2">
+                                        {service.features.map((feature, idx) => (
+                                            <li key={idx} className="flex items-center text-sm text-gray-600">
+                                                <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full mr-3"></div>
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
                         );
                     })}
                 </div>

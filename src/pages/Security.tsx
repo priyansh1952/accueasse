@@ -66,22 +66,7 @@ const SecuritySection = () => {
                     })}
                 </div>
 
-                {/* Certifications */}
-                <div className="bg-white rounded-2xl shadow-xl p-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-                        Certifications & Compliance
-                    </h3>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                        {certifications.map((cert, index) => (
-                            <div
-                                key={index}
-                                className="bg-blue-50 text-blue-700 px-4 py-3 rounded-lg text-center font-semibold text-sm hover:bg-blue-100 transition-colors"
-                            >
-                                {cert}
-                            </div>
-                        ))}
-                    </div>
-                </div>
+
 
                 {/* Final Statement */}
                 <div className="mt-8 bg-blue-50 border-l-4 border-blue-700 p-6 rounded-xl text-blue-900 text-base font-medium shadow-sm">

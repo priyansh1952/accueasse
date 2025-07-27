@@ -131,18 +131,18 @@ const FloatingAction = () => {
                                 <p className="text-sm text-gray-600 mb-4">Or contact us directly:</p>
                                 <div className="flex flex-col space-y-3">
                                     <a
-                                        href="tel:+15551234567"
+                                        href="tel:+91 7976504630"
                                         className="flex items-center text-blue-700 hover:text-blue-800 transition-colors group"
                                     >
                                         <Phone className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform" />
-                                        +1 (555) 123-4567
+                                        +91 7976504630
                                     </a>
                                     <a
-                                        href="mailto:info@proaccounting.com"
+                                        href="mailto: info@accueasee.com"
                                         className="flex items-center text-blue-700 hover:text-blue-800 transition-colors group"
                                     >
                                         <Mail className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform" />
-                                        info@proaccounting.com
+                                        info@accueasee.com
                                     </a>
                                 </div>
                             </div>

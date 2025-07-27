@@ -34,7 +34,7 @@ const Navbar = () => {
         { name: 'Tax Preparation & Planning', href: '/services#taxation' },
         { name: 'Financial Reporting', href: '/services#reporting' },
         { name: 'Business Consulting', href: '/services#consulting' },
-        { name: 'Compliance & Audit', href: '/services#compliance' },
+        { name: 'Business System Management', href: '/services#systemmanagement' },
     ];
 
     const isActive = (path: string) => location.pathname === path;

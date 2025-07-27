@@ -31,7 +31,8 @@ const WhyChooseUs = () => {
         {
             icon: Star,
             title: 'Personalized Service',
-            description: 'Tailored solutions that fit your specific business needs and industry requirements.'
+            description: 'Proficient in QuickBooks, Zoho Books, Xero, Sage, and other leading platforms—enhanced by the use of AI tools for smarter, faster accounting.'
+
         }
     ];
 
