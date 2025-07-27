@@ -135,7 +135,7 @@ const FloatingAction = () => {
                                         className="flex items-center text-blue-700 hover:text-blue-800 transition-colors group"
                                     >
                                         <Phone className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform" />
-                                        +91 7976504630
+                                        +91 9785216220
                                     </a>
                                     <a
                                         href="mailto: info@accueasee.com"

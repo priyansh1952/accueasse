@@ -1,43 +1,65 @@
 import React from 'react';
-import { Calculator, FileText, CreditCard, BarChart3, Users, Shield } from 'lucide-react';
+import {
+    Calculator,
+    RefreshCcw,
+    CreditCard,
+    DollarSign,
+    BarChart3,
+    Briefcase
+} from 'lucide-react';
 
 const Services = () => {
     const services = [
         {
             icon: Calculator,
             title: 'Bookkeeping',
-            description: 'Accurate daily transaction recording, account reconciliation, and financial record maintenance.',
-            features: ['Daily transaction recording', 'Bank reconciliation', 'Accounts payable/receivable', 'Financial statements']
+            features: [
+                'Chart of Accounts Preparation, Invoices & Expenses posting, Bank Reconciliation, Etc.',
+                'Accurate daily transaction recording and financial record maintenance.',
+                'Bookkeeping Automation: Full-Service AI Accounting Workflows.',
+                'Catch-Up Bookkeeping Services'
+            ]
+        },
+        {
+            icon: RefreshCcw,
+            title: 'Accounting Software Integration & Migration',
+            features: [
+                'Customization aligned with the distinct workflows of consulting practices.',
+                'Migration and setup of: QuickBooks, Xero, Zoho, Sage, Etc.'
+            ]
         },
         {
             icon: CreditCard,
-            title: 'Payroll Management',
-            description: 'Complete payroll processing, tax calculations, and compliance management.',
-            features: ['Payroll processing', 'Tax calculations', 'Direct deposit setup', 'Compliance reporting']
+            title: 'Accounts Payables',
+            features: [
+                'Bill.com, Dext.com & Maintaining and reviewing payment spreadsheets.',
+                'Vendor and contractor payment management.'
+            ]
         },
         {
-            icon: FileText,
-            title: 'Tax Preparation',
-            description: 'Professional tax preparation and filing services for individuals and businesses.',
-            features: ['Tax return preparation', 'Tax planning', 'IRS representation', 'Audit support']
+            icon: DollarSign,
+            title: 'Accounts Receivables',
+            features: [
+                'Improved receivables management for better cash flow performance.',
+                'Invoice Processing, Account Reconciliations & Aging analysis, Etc.'
+            ]
         },
         {
             icon: BarChart3,
-            title: 'Financial Reporting',
-            description: 'Comprehensive financial analysis and reporting to guide business decisions.',
-            features: ['Monthly/quarterly reports', 'Cash flow analysis', 'Budget planning', 'KPI tracking']
+            title: 'Management Reporting',
+            features: [
+                'Comprehensive MIS reporting to track, analyze, and optimize business performance.',
+                'Profit & Loss, Income Statement, Balance Sheet, Cash Flow reports, Etc.',
+                'Customized reports that drive performance and accountability.'
+            ]
         },
         {
-            icon: Users,
-            title: 'Business Consulting',
-            description: 'Strategic financial advice to help your business grow and optimize operations.',
-            features: ['Financial planning', 'Business strategy', 'Process optimization', 'Growth planning']
-        },
-        {
-            icon: Shield,
-            title: 'Business System Management',
-            description: '', // No description
-            features: []     // No features
+            icon: Briefcase,
+            title: 'Virtual CFO Services',
+            features: [
+                'Comprehensive budgeting, forward-looking forecasts, and financial performance improvement.',
+                'Strategic Financial Leadership – Virtually Delivered.'
+            ]
         }
     ];
 
@@ -68,16 +90,10 @@ const Services = () => {
                                 <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors">
                                     {service.title}
                                 </h3>
-                                {service.description && (
-                                    <p className="text-gray-600 mb-6">{service.description}</p>
-                                )}
                                 {service.features.length > 0 && (
-                                    <ul className="space-y-2">
+                                    <ul className="space-y-2 list-disc list-inside text-gray-600 text-sm">
                                         {service.features.map((feature, idx) => (
-                                            <li key={idx} className="flex items-center text-sm text-gray-600">
-                                                <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full mr-3"></div>
-                                                {feature}
-                                            </li>
+                                            <li key={idx}>{feature}</li>
                                         ))}
                                     </ul>
                                 )}

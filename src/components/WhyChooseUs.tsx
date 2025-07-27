@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Clock, Shield, DollarSign, Users, CheckCircle, Star } from 'lucide-react';
 
 const WhyChooseUs = () => {
@@ -32,7 +33,6 @@ const WhyChooseUs = () => {
             icon: Star,
             title: 'Personalized Service',
             description: 'Proficient in QuickBooks, Zoho Books, Xero, Sage, and other leading platforms—enhanced by the use of AI tools for smarter, faster accounting.'
-
         }
     ];
 
@@ -74,19 +74,19 @@ const WhyChooseUs = () => {
                 <div className="text-center">
                     <div className="bg-blue-700 rounded-2xl p-12 max-w-4xl mx-auto text-white shadow-xl">
                         <h3 className="text-3xl font-bold mb-6">
-                            Ready to Transform Your Business Finances?
+                            Ready to streamline and elevate your accounting processes?
                         </h3>
                         <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
                             Join hundreds of satisfied clients who trust us with their accounting needs
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300">
+                        <div className="flex justify-center">
+                            <Link
+                                to="/contact"
+                                className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300"
+                            >
                                 Schedule Consultation
-                            </button>
-                            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition-all duration-300">
-                                Learn More
-                            </button>
+                            </Link>
                         </div>
 
                         {/* Trust Indicators */}

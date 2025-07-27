@@ -12,17 +12,17 @@ const Footer = () => {
   ];
 
   const services = [
-    { name: 'Bookkeeping Services', href: '/services#bookkeeping' },
-    { name: 'Payroll Management', href: '/services#payroll' },
-    { name: 'Tax Preparation', href: '/services#taxation' },
-    { name: 'Financial Reporting', href: '/services#reporting' },
-    { name: 'Business Consulting', href: '/services#consulting' },
-    { name: 'Business System Management', href: '/services#compliance' }
+    { name: 'Bookkeeping ', href: '/services' },
+    { name: 'Accounting Software Integration & Migration', href: '/services' },
+    { name: 'Accounts Payables', href: '/services' },
+    { name: 'Accounts Receivables', href: '/services' },
+    { name: 'Management Reporting', href: '/services' },
+    { name: 'Virtual CFO Services', href: '/services' }
   ];
 
   const countries = [
     { name: 'USA', flag: '🇺🇸', phone: '+1 (555) 123-4567' },
-    { name: 'India', flag: '🇮🇳', phone: '+91 7976504630' }
+    { name: 'India', flag: '🇮🇳', phone: '+91 9785216220' }
   ];
 
   return (
@@ -35,13 +35,13 @@ const Footer = () => {
               <div>
                 <span className="text-2xl font-bold">AccuEasee</span>
                 <div className="text-xs text-blue-400 font-medium">
-                  Global Accounting Solutions
+                  Accounting Solutions
                 </div>
               </div>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Professional accounting and bookkeeping services trusted by businesses.
-              We provide comprehensive accounting to help your business thrive.
+              We provide comprehensive accounting solutions to help your business thrive.
             </p>
           </div>
 
@@ -119,7 +119,7 @@ const Footer = () => {
                     <span className="text-lg mr-2">{country.flag}</span>
                     <span className="text-sm text-gray-400 mr-2">{country.name}:</span>
                     <a
-                      href={`tel:${country.phone}`}
+                      href={`tel:${country.phone.replace(/[^+\d]/g, '')}`}
                       className="text-sm text-gray-400 hover:text-white transition-colors"
                     >
                       {country.phone}

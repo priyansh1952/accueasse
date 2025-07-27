@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TopBar from './components/TopBar';
 import Navbar from './components/Navbar';
@@ -9,10 +8,12 @@ import Security from './pages/Security';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import FloatingAction from './components/FloatingAction';
+import ScrollToTop from './components/ScrollToTop'; // ✅ Add this line
 
 function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* ✅ Add this here */}
       <div className="min-h-screen bg-white">
         <TopBar />
         <Navbar />
@@ -31,6 +32,3 @@ function App() {
 }
 
 export default App;
-
-
-// Trigger Vercel deployment

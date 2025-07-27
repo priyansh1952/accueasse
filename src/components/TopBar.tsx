@@ -4,7 +4,7 @@ import { Phone, Mail, Linkedin } from 'lucide-react';
 const TopBar = () => {
     const contacts = [
         { country: 'USA', flag: '🇺🇸', phone: '+1 (555) 123-4567' },
-        { country: 'India', flag: '🇮🇳', phone: '+91 7976504630' }
+        { country: 'India', flag: '🇮🇳', phone: '+91 9785216220' }
     ];
 
     return (
@@ -32,10 +32,12 @@ const TopBar = () => {
                     {/* Email and LinkedIn */}
                     <div className="flex items-center space-x-4">
                         <a
-                            href="mailto:info@accueasee.com"
+                            href="https://mail.google.com/mail/?view=cm&to=info@accueasee.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="hover:text-blue-300 transition-all duration-200 hover:scale-110 transform"
-                            title="Email us at info@accueasee.com"
-                            aria-label="Send email to info@accueasee.com"
+                            title="Compose email to info@accueasee.com"
+                            aria-label="Compose email in Gmail"
                         >
                             <Mail className="h-4 w-4" />
                         </a>

@@ -12,6 +12,7 @@ const About = () => {
     return (
         <section id="about" className="py-20 bg-section-primary">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Heading */}
                 <div className="text-center mb-10 animate-fade-in">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                         About <span className="gradient-text">AccuEasee</span>
@@ -25,7 +26,9 @@ const About = () => {
                     </div>
                 </div>
 
+                {/* Text and Images */}
                 <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+                    {/* Text */}
                     <div className="animate-slide-up">
                         <h3 className="text-3xl font-bold text-gray-900 mb-6">
                             Your Trusted Financial Partner
@@ -51,19 +54,27 @@ const About = () => {
                         </p>
                     </div>
 
-                    <div className="relative animate-slide-up -mt-10">
-                        <div className="relative z-10">
+                    {/* Two Full Images */}
+                    <div className="flex flex-col gap-8 animate-slide-up">
+                        <div className="relative">
                             <img
                                 src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800"
-                                alt="Professional accounting team"
-                                className="rounded-2xl shadow-2xl w-full h-[420px] object-cover"
+                                alt="Accounting team"
+                                className="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
                             />
                         </div>
-                        <div className="absolute -top-6 -right-6 w-full h-full bg-gradient-to-br from-blue-200 to-sky-200 rounded-2xl -z-10"></div>
-                        <div className="absolute -bottom-6 -left-6 w-full h-full bg-gradient-to-br from-blue-100 to-sky-100 rounded-2xl -z-20"></div>
+                        <div className="relative">
+                            <img
+                                src="https://images.pexels.com/photos/6693655/pexels-photo-6693655.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Accounting documents"
+                                className="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
+                            />
+                        </div>
+
                     </div>
                 </div>
 
+                {/* Stats */}
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                     {stats.map((stat, index) => {
                         const Icon = stat.icon;

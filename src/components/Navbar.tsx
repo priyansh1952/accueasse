@@ -29,12 +29,12 @@ const Navbar = () => {
     }, [lastScrollY]);
 
     const services = [
-        { name: 'Bookkeeping Services', href: '/services#bookkeeping' },
-        { name: 'Payroll Management', href: '/services#payroll' },
-        { name: 'Tax Preparation & Planning', href: '/services#taxation' },
-        { name: 'Financial Reporting', href: '/services#reporting' },
-        { name: 'Business Consulting', href: '/services#consulting' },
-        { name: 'Business System Management', href: '/services#systemmanagement' },
+        { name: 'Bookkeeping ', href: '/services' },
+        { name: 'Accounting Software Integration & Migration', href: '/services' },
+        { name: 'Accounts Payables', href: '/services' },
+        { name: 'Accounts Receivables', href: '/services' },
+        { name: 'Management Reporting', href: '/services' },
+        { name: 'Virtual CFO Services', href: '/services' },
     ];
 
     const isActive = (path: string) => location.pathname === path;
