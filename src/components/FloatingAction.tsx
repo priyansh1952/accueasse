@@ -86,12 +86,14 @@ const FloatingAction = () => {
                                         className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                                     >
                                         <option value="">Select a service</option>
-                                        <option value="bookkeeping">Bookkeeping Services</option>
-                                        <option value="payroll">Payroll Management</option>
-                                        <option value="tax">Tax Preparation</option>
-                                        <option value="reporting">Financial Reporting</option>
-                                        <option value="consulting">Business Consulting</option>
-                                        <option value="compliance">Business System Management</option>
+                                        <option value="bookkeeping">Bookkeeping</option>
+                                        <option value="bank-reconciliation">Bank Reconciliation</option>
+                                        <option value="payroll-reconciliation">Payroll Reconciliation</option>
+                                        <option value="payroll">Accounting Software Integration & Migration</option>
+                                        <option value="tax">Accounts Payables</option>
+                                        <option value="reporting">Accounts Receivables</option>
+                                        <option value="consulting">Management Reporting</option>
+                                        <option value="compliance">Virtual CFO Services</option>
                                     </select>
                                 </div>
 
@@ -131,14 +133,14 @@ const FloatingAction = () => {
                                 <p className="text-sm text-gray-600 mb-4">Or contact us directly:</p>
                                 <div className="flex flex-col space-y-3">
                                     <a
-                                        href="tel:+91 7976504630"
+                                        href="tel:+91 9785216220"
                                         className="flex items-center text-blue-700 hover:text-blue-800 transition-colors group"
                                     >
                                         <Phone className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform" />
                                         +91 9785216220
                                     </a>
                                     <a
-                                        href="mailto: info@accueasee.com"
+                                        href="mailto:info@accueasee.com"
                                         className="flex items-center text-blue-700 hover:text-blue-800 transition-colors group"
                                     >
                                         <Mail className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform" />
