@@ -19,7 +19,7 @@ const About = () => {
                     </h2>
                     <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium">
                         We are a team of certified Chartered Accountants dedicated to providing
-                        comprehensive financial solutions for businesses of all sizes.
+                        comprehensive accounting solutions for businesses of all sizes.
                     </p>
                     <div className="my-8 flex justify-center">
                         <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full shadow-md"></div>

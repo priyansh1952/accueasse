@@ -10,7 +10,7 @@ const HeroCarousel = () => {
             id: 1,
             image: 'https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=1920',
             title: 'Accounting Services to Build Your Business',
-            subtitle: 'Trusted by 500+ businesses worldwide for accurate financial management and strategic growth',
+            subtitle: 'Trusted by 500+ businesses worldwide for accurate accounting management and strategic growth',
             businessCTA: 'For Businesses',
             firmCTA: 'For Accounting Firms'
         },

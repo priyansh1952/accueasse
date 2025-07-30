@@ -6,7 +6,7 @@ const SecuritySection = () => {
         {
             icon: LockKeyhole,
             title: 'End-to-End Encryption',
-            description: 'All financial data is encrypted from upload to access—ensuring safety at every step.',
+            description: 'All accounting data is encrypted from upload to access—ensuring safety at every step.',
         },
         {
             icon: ShieldCheck,
@@ -66,7 +66,7 @@ const SecuritySection = () => {
                     })}
                 </div>
 
-
+           
 
                 {/* Final Statement */}
                 <div className="mt-8 bg-blue-50 border-l-4 border-blue-700 p-6 rounded-xl text-blue-900 text-base font-medium shadow-sm">

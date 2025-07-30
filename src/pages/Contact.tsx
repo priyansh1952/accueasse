@@ -14,6 +14,7 @@ const ContactSection = () => {
 
     const [state, handleSubmit] = useForm("movldgyp");
 
+
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
     ) => {
@@ -40,7 +41,7 @@ const ContactSection = () => {
                         Get Your Free <span className="text-blue-700">Consultation</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Ready to take control of your finances? Contact us today for a personalized consultation.
+                        Ready to take control of your accounting? Contact us today for a personalized consultation.
                     </p>
                 </div>
 
