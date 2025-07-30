@@ -15,11 +15,17 @@ const FAQ = () => {
     const faqData = [
         {
             question: "What are Outsourcing accounting & bookkeeping services?",
-            answer: "Outsourcing accounting & bookkeeping services involves hiring a third-party firm or individual to manage some or all of a business's financial tasks. This includes bookkeeping, payroll, preparing financial statements, and tax preparation. Companies may choose to outsource these functions to Accounting Outsourcing Companies in USA or abroad for various reasons, such as saving time and money, accessing specialized expertise, or improving efficiency and accuracy. AccuEasee is recognized among the top Bookkeeping Outsourcing Companies and is committed to delivering exceptional service."
+            answer: "Outsourcing accounting & bookkeeping services involves hiring a third-party firm or individual to manage some or all of a business's accounting tasks. This includes bookkeeping, payroll, preparing financial statements, and tax preparation. Companies may choose to outsource these functions to Accounting Outsourcing Companies in USA or abroad for various reasons, such as saving time and money, accessing specialized expertise, or improving efficiency and accuracy. AccuEasee is recognized among the top Bookkeeping Outsourcing Companies and is committed to delivering exceptional service."
         },
         {
             question: "Why Choose AccuEasee outsourcing Bookkeeping services?",
-            answer: "There are 5 key benefits: 1) Cost Savings: Outsourcing bookkeeping can be more cost-effective than hiring in-house staff, especially for small businesses. 2) Access to Expertise: AccuEasee has a team of professionals with a wide range of skills and expertise. 3) Improved Efficiency: Businesses can free up time and resources to focus on their core competencies. 4) Flexibility: Scale accounting services up or down as needed. 5) Risk Management: Mitigate the risk of errors and mistakes with professional oversight."
+            answer: [
+                "Cost Savings: Outsourcing bookkeeping can be more cost-effective than hiring in-house staff, especially for small businesses.",
+                "Access to Expertise: AccuEasee has a team of professionals with a wide range of skills and expertise.",
+                "Improved Efficiency: Businesses can free up time and resources to focus on their core competencies.",
+                "Flexibility: Scale accounting services up or down as needed.",
+                "Risk Management: Mitigate the risk of errors and mistakes with professional oversight."
+            ]
         },
         {
             question: "What countries do you serve?",
@@ -31,7 +37,7 @@ const FAQ = () => {
         },
         {
             question: "How do you ensure data security?",
-            answer: "We employ bank-level security measures including SSL encryption, secure file transfer protocols, biometric access controls, and regular security audits to protect your sensitive financial information."
+            answer: "Accounting data is hosted on secure AWS infrastructure, leveraging AWS’s compliance and security controls. Access to sensitive systems is protected using multi-factor authentication (MFA) to enhance identity verification and prevent unauthorized access."
         }
     ];
 
@@ -67,12 +73,19 @@ const FAQ = () => {
                                 )}
                             </button>
 
-                            <div className={`overflow-hidden transition-all duration-300 ${openItems.includes(index) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                                }`}>
+                            <div className={`overflow-hidden transition-all duration-300 ${openItems.includes(index) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                                 <div className="px-8 pb-6">
-                                    <p className="text-gray-600 leading-relaxed">
-                                        {item.answer}
-                                    </p>
+                                    {Array.isArray(item.answer) ? (
+                                        <ul className="list-disc list-inside space-y-2 text-gray-600">
+                                            {item.answer.map((point, idx) => (
+                                                <li key={idx}>{point}</li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <p className="text-gray-600 leading-relaxed">
+                                            {item.answer}
+                                        </p>
+                                    )}
                                 </div>
                             </div>
                         </div>

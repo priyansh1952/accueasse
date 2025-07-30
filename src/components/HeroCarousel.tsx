@@ -17,15 +17,15 @@ const HeroCarousel = () => {
         {
             id: 2,
             image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920',
-            title: 'Professional Bookkeeping & Tax Solutions',
-            subtitle: 'Streamline your finances with our expert team of certified accountants and advanced technology',
+            title: 'Professional Bookkeeping Solutions',
+            subtitle: 'Streamline your accounting with our expert team of certified accountants and advanced technology',
             businessCTA: 'Get Started Today',
             firmCTA: 'Partner With Us'
         },
         {
             id: 3,
             image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920',
-            title: 'Global Financial Expertise at Your Service',
+            title: 'Global Accounting Expertise at Your Service',
             subtitle: 'Serving clients across USA, UK, and India with 24/7 support and secure data management',
             businessCTA: 'Free Consultation',
             firmCTA: 'Learn More'

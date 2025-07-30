@@ -7,12 +7,12 @@ const WhyChooseUs = () => {
         {
             icon: Clock,
             title: 'Time-Saving Solutions',
-            description: 'Focus on your core business while we handle your financial needs efficiently and professionally.'
+            description: 'Focus on your core business while we handle your accounting needs efficiently and professionally.'
         },
         {
             icon: Shield,
             title: 'Secure & Confidential',
-            description: 'Your financial data is protected with bank-level security and strict confidentiality protocols.'
+            description: 'We safeguard your accounting data with industry-leading AWS cloud security and enforce multi-factor authentication (MFA) to ensure only authorized access'
         },
         {
             icon: DollarSign,
@@ -27,7 +27,7 @@ const WhyChooseUs = () => {
         {
             icon: CheckCircle,
             title: 'Accurate Results',
-            description: 'Precise financial records and reports you can trust for important business decisions.'
+            description: 'Precise accounting records and reports you can trust for important business decisions.'
         },
         {
             icon: Star,

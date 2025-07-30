@@ -31,20 +31,20 @@ const About = () => {
                     {/* Text */}
                     <div className="animate-slide-up">
                         <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                            Your Trusted Financial Partner
+                            Your Trusted Accounting Partner
                         </h3>
 
                         <p className="text-gray-600 mb-8 leading-relaxed text-lg">
                             We are a dedicated Accounting & Bookkeeping Vertical of a leading firm that has been delivering excellence in Taxation, Audit, and Accounting Services for over 45 years. Now, expanding with full force into that legacy with overseas/international Accounting.
                         </p>
                         <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                            Our strategic expansion underscores our commitment to delivering complete financial solutions under one roof. We offer deep expertise across US, UK, Australian GAAP, and a wide range of global accounting frameworks.
+                            Our strategic expansion underscores our commitment to delivering complete accounting solutions under one roof. We offer deep expertise across US, UK, Australian GAAP, and a wide range of global accounting frameworks.
                         </p>
                         <p className="text-gray-600 mb-8 leading-relaxed text-lg">
                             Our team is led by Chartered Accountants with over 5 years of hands-on experience at Big Four firms and top-tier fund accounting organizations, ensuring international standards are met with precision and local insight.
                         </p>
                         <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                            Backed by years of industry experience, regulatory knowledge, and client trust, and further strengthened by our network of partnered CPAs across key global jurisdictions, we are fully equipped to support businesses with end-to-end financial transparency and control.
+                            Backed by years of industry experience, regulatory knowledge, and client trust, and further strengthened by our network of partnered CPAs across key global jurisdictions, we are fully equipped to support businesses with end-to-end accounting transparency and control.
                         </p>
                         <p className="text-gray-600 mb-8 leading-relaxed text-lg">
                             No matter your size, our seasoned professionals deliver reliable accounting services with a focus on accuracy, compliance, and transparency.

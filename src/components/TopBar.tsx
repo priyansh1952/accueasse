@@ -3,7 +3,7 @@ import { Phone, Mail, Linkedin } from 'lucide-react';
 
 const TopBar = () => {
     const contacts = [
-        { country: 'USA', flag: '🇺🇸', phone: '+1 (555) 123-4567' },
+       
         { country: 'India', flag: '🇮🇳', phone: '+91 9785216220' }
     ];
 

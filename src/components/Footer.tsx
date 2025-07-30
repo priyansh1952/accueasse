@@ -1,5 +1,6 @@
 import React from 'react';
-import { Mail, MapPin, Linkedin } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,7 +9,8 @@ const Footer = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Security', href: '/security' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Contact', href: '/contact' },
+    { name: 'Privacy & Usage Policy', href: '/privacy' } // ✅ Already included
   ];
 
   const services = [
@@ -20,15 +22,11 @@ const Footer = () => {
     { name: 'Virtual CFO Services', href: '/services' }
   ];
 
-  const countries = [
-    { name: 'USA', flag: '🇺🇸', phone: '+1 (555) 123-4567' },
-    { name: 'India', flag: '🇮🇳', phone: '+91 9785216220' }
-  ];
-
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
@@ -51,12 +49,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-gray-400 hover:text-white transition-colors hover:translate-x-1 transform duration-200 inline-block"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -68,12 +66,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.name}>
-                  <a
-                    href={service.href}
+                  <Link
+                    to={service.href}
                     className="text-gray-400 hover:text-white transition-colors hover:translate-x-1 transform duration-200 inline-block"
                   >
                     {service.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -83,6 +81,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Contact Information</h3>
             <div className="space-y-4">
+              {/* Email */}
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-blue-400 mr-3 flex-shrink-0" />
                 <a
@@ -93,6 +92,7 @@ const Footer = () => {
                 </a>
               </div>
 
+              {/* LinkedIn */}
               <div className="flex items-center">
                 <Linkedin className="h-5 w-5 text-blue-400 mr-3 flex-shrink-0" />
                 <a
@@ -105,27 +105,23 @@ const Footer = () => {
                 </a>
               </div>
 
+              {/* Phone (India) */}
+              <div className="flex items-center">
+                <Phone className="h-5 w-5 text-blue-400 mr-3 flex-shrink-0" />
+                <a
+                  href="tel:+919785216220"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  +91 9785216220
+                </a>
+              </div>
+
+              {/* Address */}
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-blue-400 mr-3 mt-1 flex-shrink-0" />
                 <span className="text-gray-400">
                   A-25 1st floor 103, Sunshine Residency, Shastri Nagar, Jaipur 302016
                 </span>
-              </div>
-
-              <div className="pt-4">
-                <h4 className="text-sm font-semibold text-blue-400 mb-3">Global Offices</h4>
-                {countries.map((country) => (
-                  <div key={country.name} className="flex items-center mb-2">
-                    <span className="text-lg mr-2">{country.flag}</span>
-                    <span className="text-sm text-gray-400 mr-2">{country.name}:</span>
-                    <a
-                      href={`tel:${country.phone.replace(/[^+\d]/g, '')}`}
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
-                    >
-                      {country.phone}
-                    </a>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
@@ -137,8 +133,9 @@ const Footer = () => {
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} AccuEasee. All rights reserved.
             </div>
-            <div className="text-sm text-gray-400">
-              Serving clients Globally
+            <div className="flex flex-col md:flex-row items-center text-sm text-gray-400 space-y-2 md:space-y-0 md:space-x-4">
+              <span>Serving clients Globally</span>
+             
             </div>
           </div>
         </div>
